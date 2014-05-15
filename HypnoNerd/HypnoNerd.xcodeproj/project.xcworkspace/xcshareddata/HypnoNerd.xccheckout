@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0FDEF6F9-7049-4E51-95A3-4949A3171B64</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HypnoNerd</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E446A4C7-7CAC-4361-A9AB-914EEEB1F3FA</key>
+		<string>https://github.com/whwkong/BNR4e_06_HypnoNerd.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HypnoNerd.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E446A4C7-7CAC-4361-A9AB-914EEEB1F3FA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/whwkong/BNR4e_06_HypnoNerd.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E446A4C7-7CAC-4361-A9AB-914EEEB1F3FA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E446A4C7-7CAC-4361-A9AB-914EEEB1F3FA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HypnoNerd</string>
+		</dict>
+	</array>
+</dict>
+</plist>
