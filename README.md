@@ -9,5 +9,5 @@ The purpose of this chapter :
 ⁃ introduces First Responder concept : UIFirstResponder
 ⁃ introduces the Delegate design pattern 
 ⁃ introduces Protocols (similar to Java's Interface) 
-
+- introduces motion effects for iOS 7 devices
 
