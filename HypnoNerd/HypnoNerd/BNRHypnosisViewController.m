@@ -9,7 +9,7 @@
 #import "BNRHypnosisViewController.h"
 #import "BNRHypnosisView.h"
 
-@interface BNRHypnosisViewController ()
+@interface BNRHypnosisViewController () <UITextFieldDelegate>
 
 @end
 
@@ -42,9 +42,25 @@
     NSLog(@"HVC loadView");
     
     // Create a view
-    BNRHypnosisView *backgroundView = [[BNRHypnosisView alloc] init];
+    BNRHypnosisView *hypnosisView = [[BNRHypnosisView alloc] init];
     
-    self.view = backgroundView;
+        // Add a textField
+        CGRect textFieldRect = CGRectMake(40,70,240,30);
+        UITextField *textField = [[UITextField alloc] initWithFrame:textFieldRect];
+    
+        // Setting the border style on the text field will allow us to see it more easily
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+    
+        textField.placeholder = @"Hypnotize me";
+        textField.returnKeyType = UIReturnKeyDone;
+    
+        textField.keyboardType = UIKeyboardTypeASCIICapable;
+    
+        [hypnosisView addSubview:textField];
+    
+        textField.delegate = self;
+    
+    self.view = hypnosisView;
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -59,5 +75,17 @@
     
     NSLog(@"HVC viewDidLoad");
 }
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *) textField
+{
+    NSLog(@"%@", textField);
+    
+    textField.text = @"";
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
 
 @end
