@@ -1,0 +1,5 @@
+#ignore custom user data
+HypnoNerd/HypnoNerd.xcodeproj/project.xcworkspace
+HypnoNerd/HypnoNerd.xcodeproj/xcuserdata
+
+
