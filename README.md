@@ -12,6 +12,7 @@ Chapter 27 covers the following :
 	- alpha fade in
 	- timing functions
 	- keyframe animation
+	- spring animations
 
 
 -----------------------------------

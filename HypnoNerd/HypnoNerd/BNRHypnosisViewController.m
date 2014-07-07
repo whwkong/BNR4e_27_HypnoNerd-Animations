@@ -10,6 +10,7 @@
 #import "BNRHypnosisView.h"
 
 @interface BNRHypnosisViewController () <UITextFieldDelegate>
+@property (nonatomic, weak) UITextField *textField;
 
 @end
 
@@ -44,10 +45,11 @@
     NSLog(@"HVC loadView");
     
     // Create a view
-    BNRHypnosisView *hypnosisView = [[BNRHypnosisView alloc] init];
+    CGRect frame = [UIScreen mainScreen].bounds;
+    BNRHypnosisView *hypnosisView = [[BNRHypnosisView alloc] initWithFrame:frame];
     
     // Add a textField
-    CGRect textFieldRect = CGRectMake(40,70,240,30);
+    CGRect textFieldRect = CGRectMake(40,-20,240,30);
     UITextField *textField = [[UITextField alloc] initWithFrame:textFieldRect];
     
     // Setting the border style on the text field will allow us to see it more easily
@@ -55,28 +57,44 @@
     
     textField.placeholder = @"Hypnotize me";
     textField.returnKeyType = UIReturnKeyDone;
-    
     textField.keyboardType = UIKeyboardTypeASCIICapable;
     
     [hypnosisView addSubview:textField];
     
     textField.delegate = self;
-    
+    // store pointer to textField so we can animate it
+    self.textField = textField;
     self.view = hypnosisView;
 }
 
 #pragma mark - View life cycle
--(void) viewWillAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     NSLog(@"HVC viewWillAppear:");
 }
 
--(void) viewDidLoad
+- (void)viewDidLoad
 {
     [super viewDidLoad];
     
     NSLog(@"HVC viewDidLoad");
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+         usingSpringWithDamping:0.25
+          initialSpringVelocity:0.0
+                        options:0
+                     animations:^{
+                         CGRect frame = CGRectMake(40, 70, 240, 30);
+                         self.textField.frame = frame;
+                     }
+                     completion:NULL];
 }
 
 #pragma mark - Actions
@@ -150,9 +168,9 @@
                             int y = arc4random()%height;
                             messageLabel.center = CGPointMake(x,y);
                         }];
-            }
-          completion:NULL];
-       
+            } completion:^(BOOL finished) {
+                NSLog(@"Animation finished");
+            }];
         
         // Add motion effects for iOS 7 devices
         UIInterpolatingMotionEffect *motionEffect;
