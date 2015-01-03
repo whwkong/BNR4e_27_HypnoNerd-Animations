@@ -1,13 +1,12 @@
-BNR4e_Ch27_ControllingAnimations-HypnoNerd
-====================
-
+# BNR4e\_Ch27\_ControllingAnimations-HypnoNerd
 Big Nerd Ranch's iOS Programming 4th ed, Hillegass & Conway
 Ch27-Controlling Animations
 
-HypnoNerd app 
+## HypnoNerd app 
+- HypnoNerd displays a 'hypnotic'-like swirl
 - this app builds on the functionality of the HypnoNerd app from chapter 7.
 
-Chapter 27 covers the following :
+### Chapter 27 covers the following :
 - various animation techniques
 	- alpha fade in
 	- timing functions
